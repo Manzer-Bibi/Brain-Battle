@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuizMaster 5-Minute Challenge - Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🧠Brain Battle</h1>
+            <h2>3-Minute Quiz</h2>
+            <p>Test your knowledge in just 3 minutes!</p>
+        </div>
+        <body class="home-page"></body>
+        <div class="category-grid">
+            <div class="category-card" data-category="iq">
+                <div class="category-icon">🧠</div>
+                <h3>IQ Test</h3>
+                <p>15 logic and reasoning questions</p>
+                <div class="difficulty-buttons">
+                    <button class="difficulty-btn easy" onclick="selectCategory('iq', 'easy')">Easy</button>
+                    <button class="difficulty-btn medium" onclick="selectCategory('iq', 'medium')">Medium</button>
+                    <button class="difficulty-btn hard" onclick="selectCategory('iq', 'hard')">Hard</button>
+                </div>
+            </div>
+            <div class="category-card" data-category="general">
+                <div class="category-icon">🌍</div>
+                <h3>General Knowledge</h3>
+                <p>15 trivia questions from various fields</p>
+                <div class="difficulty-buttons">
+                    <button class="difficulty-btn easy" onclick="selectCategory('general', 'easy')">Easy</button>
+                    <button class="difficulty-btn medium" onclick="selectCategory('general', 'medium')">Medium</button>
+                    <button class="difficulty-btn hard" onclick="selectCategory('general', 'hard')">Hard</button>
+                </div>
+            </div>
+            <div class="category-card" data-category="science">
+                <div class="category-icon">🔬</div>
+                <h3>Science</h3>
+                <p>15 science and technology questions</p>
+                <div class="difficulty-buttons">
+                    <button class="difficulty-btn easy" onclick="selectCategory('science', 'easy')">Easy</button>
+                    <button class="difficulty-btn medium" onclick="selectCategory('science', 'medium')">Medium</button>
+                    <button class="difficulty-btn hard" onclick="selectCategory('science', 'hard')">Hard</button>
+                </div>
+            </div>
+            <div class="category-card" data-category="history">
+                <div class="category-icon">📚</div>
+                <h3>History</h3>
+                <p>15 historical events and figures</p>
+                <div class="difficulty-buttons">
+                    <button class="difficulty-btn easy" onclick="selectCategory('history', 'easy')">Easy</button>
+                    <button class="difficulty-btn medium" onclick="selectCategory('history', 'medium')">Medium</button>
+                    <button class="difficulty-btn hard" onclick="selectCategory('history', 'hard')">Hard</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function selectCategory(category, difficulty) {
+            // Store the selected category and difficulty in localStorage
+            localStorage.setItem('selectedCategory', category);
+            localStorage.setItem('selectedDifficulty', difficulty);
+            // Navigate to the quiz page
+            window.location.href = '02-quiz.html';
+        }
+    </script>
+</body>
+
+</html> 

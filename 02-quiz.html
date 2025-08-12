@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuizMaster 5-Minute Challenge - Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="quiz-header">
+            <body class="quiz-page"></body>
+            <div class="timer-container">
+                <div class="timer-icon">⏱️</div>
+                <div class="timer" id="timer">5:00</div>
+            </div>
+            <div class="difficulty-badge" id="difficultyBadge">Medium</div>
+            <div class="progress-container">
+                <div class="progress-text">
+                    Question <span id="currentQuestion">1</span> of 15
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="question-container">
+            <h2 id="questionText">Loading question...</h2>
+            <div class="options-container" id="optionsContainer">
+                <!-- Options will be populated by JavaScript -->
+            </div>
+        </div>
+
+       <!-- Keep your existing structure, just ensure these buttons exist -->
+<div class="quiz-controls">
+    <button id="nextBtn" class="btn btn-primary" disabled>Next Question</button>
+    <button id="doneBtn" class="btn btn-primary" disabled style="display: none;">Submit Quiz</button>
+</div>
+
+    <script src="quiz-script.js" defer></script>
+</body>
+
+</html> 
